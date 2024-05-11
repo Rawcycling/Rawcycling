@@ -25,7 +25,7 @@ const Clients = () => {
         We have been working with some Fortune 10000+ clients
       </p>
 
-      <div className="flex flex-row items-center sm:flex-col justify-center gap-[100px] sm:gap-[10px] w-[100%] mt-[50px] ">
+      <div className="flex flex-row items-center sm:flex-col md:flex-col justify-center gap-[100px] sm:gap-[10px] w-[100%] mt-[50px] ">
         {clientData.map((client, index) => (
           <img src={client.image} alt="" key={index} />
         ))}

@@ -2,16 +2,16 @@ import logo from "/logo2.png";
 
 const WhoAreWe = () => {
   return (
-    <div className="mt-[70px] flex flex-row items-center w-[100%] px-[100px] sm:px-[10px] sm:flex-col">
-      <div className="w-[40%]">
-        <img src={logo} alt="" />
+    <div className="mt-[70px] flex flex-row items-center w-[100%] px-[100px] sm:px-[10px] md:px-[20px] sm:flex-col md:flex-col">
+      <div className="w-[40%] md:w-[70%]">
+        <img src={logo} alt="" className="w-[100%]" />
       </div>
 
-      <div className="w-[60%] sm:w-[100%]">
+      <div className="w-[60%] sm:w-[100%] md:w-[100%] md:mt-[50px]">
         <h1 className="font-inter font-semibold text-[43px] text-[#164C28] leading-[53px] text-center">
           Who Are We?
         </h1>
-        <p className="font-inter font-normal text-[15px] text-[#717171] leading-[25px] mt-[19px] sm:text-center">
+        <p className="font-inter font-normal md:text-center text-[15px] md:text-[20px] text-[#717171] leading-[25px] md:leading-[35px] mt-[19px] sm:text-center">
           Rawcycling is more than just a platform - it's a movement towards a
           cleaner, greener future. We provide a significant opportunity for
           Nigerians to address life's essentials while fostering an environment
@@ -29,10 +29,10 @@ const WhoAreWe = () => {
         </p>
 
         <div className="mt-[38px]">
-          <h2 className="font-inter font-semibold text-[23px] text-[#164C28] leading-[33px] sm:text-center">
+          <h2 className="font-inter font-semibold text-[23px] text-[#164C28] md:text-center leading-[33px] sm:text-center">
             Olusola Ayanfeoluwa
           </h2>
-          <p className="font-inter font-semibold text-[23px] text-[#89939E] leading-[33px] sm:text-center">
+          <p className="font-inter font-semibold text-[23px] text-[#89939E] md:text-center leading-[33px] sm:text-center">
             CEO Rawcycling
           </p>
         </div>

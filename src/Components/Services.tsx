@@ -31,11 +31,11 @@ const Services = () => {
         Empowering Sustainability Through Comprehensive Solutions
       </p>
 
-      <div className="mt-[52px] flex flex-row sm:flex-col items-center gap-[150px] px-[100px]">
+      <div className="mt-[52px] flex flex-row sm:flex-col md:flex-col items-center gap-[150px] px-[100px] sm:px-[10px] md:px-[20px]">
         {serviceData.map((service, index) => (
           <div
             key={index}
-            className="w-[500px] sm:w-[400px] h-[380px] py-[29px] px-[39px] shadow-[0px_2.39px_4.79px_0px_#ABBED166] rounded-[10px] bg-[#fff] flex flex-col items-center"
+            className="w-[500px] sm:w-[100%] h-[380px] py-[29px] px-[39px] shadow-[0px_2.39px_4.79px_0px_#ABBED166] rounded-[10px] bg-[#fff] flex flex-col items-center"
           >
             <img src={service.image} alt="" />
             <h1 className="font-inter text-[30px] leading-[43.1px] font-bold text-[#4D4D4D] text-center">

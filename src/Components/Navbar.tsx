@@ -10,12 +10,12 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="fixed w-[100%] px-[154px] sm:px-[10px] py-[22px] flex flex-row items-center z-[10000000] justify-between shadow-[0px_4.79px_9.58px_0px_#ABBED166] bg-[#fff]">
+      <div className="fixed w-[100%] px-[154px] sm:px-[10px] md:px-[20px] py-[22px] flex flex-row items-center z-[10000000] justify-between shadow-[0px_4.79px_9.58px_0px_#ABBED166] bg-[#fff]">
         <div className="w-[200px]">
           <img src={logo} alt="" />
         </div>
 
-        <div className="sm:hidden flex flex-row items-center gap-[25px]">
+        <div className="sm:hidden md:hidden flex flex-row items-center gap-[25px]">
           <a
             href="/"
             className="font-inter font-medium text-[15px] text-[#4D4D4D] leading-[28px] hover:text-[#164C28]"
@@ -52,7 +52,7 @@ const Navbar = () => {
 
         <div
           onClick={toggleHamburger}
-          className="hidden sm:flex sm:flex-col sm:items-start sm:gap-[10px]"
+          className="hidden sm:flex sm:flex-col sm:items-start sm:gap-[10px] md:flex md:flex-col md:items-start md:gap-[10px]"
         >
           <div className="w-[30px] h-[2px] bg-[#164C28] rounded-[3px]"></div>
           <div className="w-[35px] h-[2px] bg-[#164C28] rounded-[50px]"></div>

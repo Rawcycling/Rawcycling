@@ -26,18 +26,18 @@ const TrackRecord = () => {
     },
   ];
   return (
-    <div className="mt-[100px] w-[100%] bg-[#F5F7FA] flex flex-row sm:flex-col items-center px-[100px] sm:px-[10px] py-[75px]">
-      <div className="w-[50%] sm:w-[100%]">
-        <h1 className="font-inter font-semibold text-[43px] sm:text-[40px] sm:text-center leading-[50px] sm:leading-10 text-[#4D4D4D]">
+    <div className="mt-[100px] w-[100%] bg-[#F5F7FA] flex flex-row sm:flex-col md:flex-col items-center px-[100px] sm:px-[10px] md:px-[20px] py-[75px]">
+      <div className="w-[50%] sm:w-[100%] md:w-[100%]">
+        <h1 className="font-inter font-semibold text-[43px] md:text-center sm:text-[40px] sm:text-center leading-[50px] sm:leading-10 text-[#4D4D4D]">
           Empowering Connections: Clients, Locations, Transactions.
         </h1>
-        <p className="font-inter font-normal text-[19px] leading-[29px] text-[#18191F] mt-[10px] sm:text-center">
+        <p className="font-inter font-normal text-[19px] md:text-center leading-[29px] text-[#18191F] mt-[10px] sm:text-center">
           Experience seamless connections: from clients to locations to
           transactions, Rawcycling ensures convenience at every step.
         </p>
       </div>
 
-      <div className="w-[50%] sm:w-[100%] grid grid-cols-2 sm:grid-cols-1 gap-[20px] sm:items-center sm: justify-items-center sm:mt-[20px]">
+      <div className="w-[50%] sm:w-[100%] md:w-[100%] grid grid-cols-2 sm:grid-cols-1 gap-[20px] sm:items-center sm: justify-items-center sm:mt-[20px] md:mt-[50px]">
         {trackRecordData.map((tr, index) => (
           <div key={index} className="flex flex-row items-start gap-[20px]">
             <img src={tr.image} alt="" />
