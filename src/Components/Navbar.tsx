@@ -63,7 +63,7 @@ const Navbar = () => {
       <div
         className={
           displayHamburger
-            ? "absolute flex flex-col items-center justify-center w-[100%] gap-[25px] mt-[80px] bg-[#fff] shadow-2xl py-[20px] rounded-[50px] rounded-t-none"
+            ? "fixed flex flex-col items-center justify-center w-[100%] gap-[25px] mt-[70px] z-[10] bg-[#fff] shadow-2xl py-[20px] rounded-[50px] rounded-t-none"
             : "hidden"
         }
       >
