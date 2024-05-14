@@ -2,7 +2,7 @@ import logo from "/logo2.png";
 
 const WhoAreWe = () => {
   return (
-    <div className="mt-[70px] flex flex-row items-center w-[100%] px-[100px] sm:px-[10px] md:px-[20px] sm:flex-col md:flex-col">
+    <div className="mt-[70px] gap-[70px] flex flex-row items-center w-[100%] px-[100px] sm:px-[10px] md:px-[20px] sm:flex-col md:flex-col">
       <div className="w-[40%] md:w-[70%]">
         <img src={logo} alt="" className="w-[100%]" />
       </div>
