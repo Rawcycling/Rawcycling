@@ -2,7 +2,14 @@ import { useEffect, useState } from "react";
 import image1 from "/heroImg1.png";
 import image2 from "/heroImg2.png";
 import image3 from "/heroImg3.png";
-const Hero = () => {
+import { SelectedPage } from "../../utils/types";
+import { motion } from "framer-motion";
+
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+const Hero = ({ setSelectedPage }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const carouselData = [
@@ -38,7 +45,10 @@ const Hero = () => {
     return () => clearInterval(intervalId);
   });
   return (
-    <>
+    <motion.div
+      id="home"
+      onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+    >
       <div className="px-[154px] sm:px-[10px] md:px-[20px] py-[80px] sm:py-[50px] h-[80vh] sm:h-[100vh] flex flex-row sm:flex-col items-center justify-between w-[100%] gap-[125px] sm:gap-[0px] bg-[#F5F7FA]">
         <div className="w-[50%] sm:w-[100%] md:w-[50%]">
           <h1 className="font-inter font-semibold text-[75px] sm:text-[50px] text-[#4D4D4D] leading-[91px]">
@@ -74,7 +84,7 @@ const Hero = () => {
           />
         ))}
       </div>
-    </>
+    </motion.div>
   );
 };
 

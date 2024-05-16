@@ -1,8 +1,18 @@
+import { SelectedPage } from "../utils/types";
 import logo from "/logo2.png";
+import { motion } from "framer-motion";
 
-const WhoAreWe = () => {
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+const WhoAreWe = ({ setSelectedPage }: Props) => {
   return (
-    <div className="mt-[70px] gap-[70px] flex flex-row items-center w-[100%] px-[100px] sm:px-[10px] md:px-[20px] sm:flex-col md:flex-col">
+    <motion.div
+      onViewportEnter={() => setSelectedPage(SelectedPage.About)}
+      className="mt-[130px] gap-[70px] flex flex-row items-center w-[100%] px-[100px] sm:px-[10px] md:px-[20px] sm:flex-col md:flex-col"
+      id="about"
+    >
       <div className="w-[40%] md:w-[70%]">
         <img src={logo} alt="" className="w-[100%]" />
       </div>
@@ -37,7 +47,7 @@ const WhoAreWe = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

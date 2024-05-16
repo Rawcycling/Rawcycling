@@ -3,8 +3,20 @@ import instagram from "/instagram.png";
 import twitter from "/twitter.png";
 import youtube from "/youtube.png";
 import send from "/send.png";
+import arrow from "/up-arrow.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Footer = () => {
+  const handleClick = () => {
+    const targetElement = document.getElementById("home");
+    if (targetElement) {
+      const offset = targetElement.offsetTop - 150;
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div className="bg-[#164C28] py-[75px] px-[180px] sm:px-[10px] md:px-[20px] flex flex-row sm:flex-col md:flex-col sm:gap-[50px] md:gap-[50px] items-start justify-between">
       <div>
@@ -86,6 +98,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <AnchorLink
+        href={`#home`}
+        className="absolute z-[10000000] right-0 pr-[50px] pt-[220px]"
+        onClick={handleClick}
+      >
+        <img src={arrow} alt="" width={50} />
+      </AnchorLink>
     </div>
   );
 };

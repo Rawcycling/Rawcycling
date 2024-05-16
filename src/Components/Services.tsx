@@ -1,7 +1,13 @@
 import serviceIcon1 from "/serviceIcon1.png";
-
 import serviceIcon3 from "/serviceIcon3.png";
-const Services = () => {
+import { SelectedPage } from "../utils/types";
+import { motion } from "framer-motion";
+
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+const Services = ({ setSelectedPage }: Props) => {
   const serviceData = [
     {
       image: serviceIcon1,
@@ -23,7 +29,11 @@ const Services = () => {
     },
   ];
   return (
-    <div className="mt-[80px]" id="services">
+    <motion.div
+      onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
+      className="mt-[180px]"
+      id="services"
+    >
       <h1 className="font-inter font-semibold text-[40px] text-center text-[#4D4D4D]">
         Our Services
       </h1>
@@ -47,7 +57,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

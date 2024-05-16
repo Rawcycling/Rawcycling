@@ -2,7 +2,15 @@ import tr1 from "/tr1.png";
 import tr2 from "/tr2.png";
 import tr3 from "/tr3.png";
 import tr4 from "/tr4.png";
-const TrackRecord = () => {
+
+import { SelectedPage } from "../utils/types";
+import { motion } from "framer-motion";
+
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+const TrackRecord = ({ setSelectedPage }: Props) => {
   const trackRecordData = [
     {
       image: tr1,
@@ -26,7 +34,11 @@ const TrackRecord = () => {
     },
   ];
   return (
-    <div className="mt-[100px] w-[100%] bg-[#F5F7FA] flex flex-row sm:flex-col md:flex-col items-center px-[100px] sm:px-[10px] md:px-[20px] py-[75px]">
+    <motion.div
+      onViewportEnter={() => setSelectedPage(SelectedPage.Community)}
+      className="mt-[150px] w-[100%] bg-[#F5F7FA] flex flex-row sm:flex-col md:flex-col items-center px-[100px] sm:px-[10px] md:px-[20px] py-[75px]"
+      id="community"
+    >
       <div className="w-[50%] sm:w-[100%] md:w-[100%]">
         <h1 className="font-inter font-semibold text-[43px] md:text-center sm:text-[40px] sm:text-center leading-[50px] sm:leading-10 text-[#4D4D4D]">
           Empowering Connections: Clients, Locations, Transactions.
@@ -53,7 +65,7 @@ const TrackRecord = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

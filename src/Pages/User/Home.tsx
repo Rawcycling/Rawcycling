@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Clients from "../../Components/Clients";
 import Footer from "../../Components/Footer";
 import GetInTouch from "../../Components/GetInTouch";
@@ -6,19 +7,23 @@ import Navbar from "../../Components/Navbar";
 import Services from "../../Components/Services";
 import TrackRecord from "../../Components/TrackRecord";
 import WhoAreWe from "../../Components/WhoAreWe";
+import { SelectedPage } from "../../utils/types";
 import Hero from "./Hero";
 
 const Home = () => {
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+  );
   return (
     <div className="">
-      <Navbar />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
       <div className="pt-[100px] sm:pt-[60px] md:pt-[40px]">
-        <Hero />
+        <Hero setSelectedPage={setSelectedPage} />
         <Clients />
-        <Services />
-        <WhoAreWe />
-        <TrackRecord />
+        <Services setSelectedPage={setSelectedPage} />
+        <WhoAreWe setSelectedPage={setSelectedPage} />
+        <TrackRecord setSelectedPage={setSelectedPage} />
         <JoinUsToday />
         <GetInTouch />
 
