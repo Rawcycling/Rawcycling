@@ -35,7 +35,7 @@ const ContactForm = () => {
               EMAIL
             </p>
             <p className="font-montserrat font-semibold text-[13px] text-[#1A6334]">
-              rawcycling@help.com
+              rawcyclinginfo@gmail.com
             </p>
           </div>
         </div>
