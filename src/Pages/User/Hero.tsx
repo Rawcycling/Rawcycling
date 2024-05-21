@@ -62,11 +62,10 @@ const Hero = ({ setSelectedPage }: Props) => {
             {carouselData[currentIndex]?.paragraph}
           </p>
 
-          <Link
-            to="https://get-rawapp.netlify.app/"
-            className="bg-[#164C28] py-[16px] px-[38px] text-white mt-[38px] sm:mt-[10px] font-inter font-medium text-[15px] rounded-[5px] hover:shadow-2xl"
-          >
-            Get RawApp
+          <Link to="https://get-rawapp.netlify.app/">
+            <button className="bg-[#164C28] py-[16px] px-[38px] text-white mt-[38px] sm:mt-[10px] font-inter font-medium text-[15px] rounded-[5px] hover:shadow-2xl">
+              Get RawApp
+            </button>
           </Link>
         </div>
 
