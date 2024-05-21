@@ -5,6 +5,7 @@ import youtube from "/youtube.png";
 import send from "/send.png";
 import arrow from "/up-arrow.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleClick = () => {
@@ -32,7 +33,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-row items-center gap-[20px] mt-[47px]">
-          <img src={instagram} alt="" />
+          <Link to="https://www.instagram.com/_rawcycling?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+            <img src={instagram} alt="" />
+          </Link>
           <img src={twitter} alt="" />
           <img src={youtube} alt="" />
         </div>

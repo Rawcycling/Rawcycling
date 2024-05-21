@@ -3,6 +3,7 @@ import arrow from "/arrow.png";
 import { useState } from "react";
 import NavLink from "./NavLink";
 import { SelectedPage } from "../utils/types";
+import { Link } from "react-router-dom";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -52,10 +53,13 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           navbarHeight={150}
         />
 
-        <button className="bg-[#164C28] py-[16px] px-[38px] text-white  font-inter font-medium text-[15px] flex flex-row items-center gap-[10px] rounded-[5px] hover:shadow-2xl">
+        <Link
+          to="https://get-rawapp.netlify.app/"
+          className="bg-[#164C28] py-[16px] px-[38px] text-white  font-inter font-medium text-[15px] flex flex-row items-center gap-[10px] rounded-[5px] hover:shadow-2xl"
+        >
           Get RawApp
           <img src={arrow} alt="" />
-        </button>
+        </Link>
       </div>
 
       <div className="fixed w-[100%] px-[154px] sm:px-[10px] md:px-[20px] py-[22px] h-[100px] flex flex-row items-center z-[1000000000] justify-between shadow-[0px_4.79px_9.58px_0px_#ABBED166] bg-[#fff]">
@@ -92,10 +96,13 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
             navbarHeight={150}
           />
 
-          <button className="bg-[#164C28] py-[16px] px-[38px] text-white  font-inter font-medium text-[15px] flex flex-row items-center gap-[10px] rounded-[5px] hover:shadow-2xl">
+          <Link
+            to="https://get-rawapp.netlify.app/"
+            className="bg-[#164C28] py-[16px] px-[38px] text-white  font-inter font-medium text-[15px] flex flex-row items-center gap-[10px] rounded-[5px] hover:shadow-2xl"
+          >
             Get RawApp
             <img src={arrow} alt="" />
-          </button>
+          </Link>
         </div>
 
         <div

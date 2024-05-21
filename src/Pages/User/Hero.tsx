@@ -4,6 +4,7 @@ import image2 from "/heroImg2.png";
 import image3 from "/heroImg3.png";
 import { SelectedPage } from "../../utils/types";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -61,9 +62,12 @@ const Hero = ({ setSelectedPage }: Props) => {
             {carouselData[currentIndex]?.paragraph}
           </p>
 
-          <button className="bg-[#164C28] py-[16px] px-[38px] text-white mt-[38px] sm:mt-[10px] font-inter font-medium text-[15px] rounded-[5px] hover:shadow-2xl">
+          <Link
+            to="https://get-rawapp.netlify.app/"
+            className="bg-[#164C28] py-[16px] px-[38px] text-white mt-[38px] sm:mt-[10px] font-inter font-medium text-[15px] rounded-[5px] hover:shadow-2xl"
+          >
             Get RawApp
-          </button>
+          </Link>
         </div>
 
         <div className="w-[50%] sm:w-[100%]">
